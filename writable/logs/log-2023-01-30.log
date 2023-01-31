@@ -1,0 +1,24 @@
+ERROR - 2023-01-30 18:44:21 --> mysqli_sql_exception: Table 'db_masjid.tab_user' doesn't exist in C:\xampp2\htdocs\UAS_Sajidan\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp2\htdocs\UAS_Sajidan\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp2\htdocs\UAS_Sajidan\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp2\htdocs\UAS_Sajidan\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp2\htdocs\UAS_Sajidan\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\UAS_Sajidan\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\UAS_Sajidan\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp2\htdocs\UAS_Sajidan\app\Models\User_model.php(20): CodeIgniter\BaseModel->first()
+#7 C:\xampp2\htdocs\UAS_Sajidan\app\Controllers\Home.php(25): App\Models\User_model->login('admin', '21232f297a57a5a...')
+#8 C:\xampp2\htdocs\UAS_Sajidan\system\CodeIgniter.php(925): App\Controllers\Home->login()
+#9 C:\xampp2\htdocs\UAS_Sajidan\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp2\htdocs\UAS_Sajidan\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp2\htdocs\UAS_Sajidan\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-30 18:44:21 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 267.
+ 1 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\User_model.php(20): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Home.php(25): App\Models\User_model->login('admin', '21232f297a57a5a743894a0e4a801fc3')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Home->login()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
